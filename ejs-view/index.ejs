@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="" method="post">
+
+            <label for="addTask">Добавить задачу:</label>
+            <input type="text" name="addTask" id="addTask" placeholder="Задача">
+            <input id="but" type="submit" value="Добавить">
+        </form>
+        <form action="" method="post">
+            <input name="trash" type="submit" value="ФФФФФ">
+        </form>
+        <section class="tasks">
+            <h1>Выполнено</h1>
+            <% if (task) { %>
+                <% task.forEach(element=> { %>
+                    <div class="task">
+                        <p>
+                            <%=element.id%>
+                        </p>
+                        <p> Задача: <br>
+                            <%=element.task%>
+                        </p>
+                        <p>Дата <br>
+                            <%=element.date%>
+                        </p>
+                        <p>Время <br>
+                            <%=element.time%>
+                        </p>
+                        <!-- <button id="deleteButton">Delete Item</button> -->
+                        <button onclick="del('<%=element.id%>')">Delete Item</button>
+                    </div>
+
+                    <% })} ;%>
+
+                        <!-- <div class="wrapper__task">
+                <div class="task">
+                    <p>Задача</p>
+                    <p>date</p>
+                    <p>time</p>
+                </div>
+                <div class="task">
+                    <p>Задача</p>
+                    <p>date</p>
+                    <p>time</p>
+                </div>
+            </div> -->
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
