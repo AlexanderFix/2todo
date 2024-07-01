@@ -1,27 +1,34 @@
 
 
 let tasks = document.querySelectorAll('.tasks')
+// const socket = io();
 
 
-
-function del (params) {
-    fetch('/delete-item', {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ id: params })
-        })
-            .then(response => response.text())
-}
-// document.getElementById('deleteButton').addEventListener('click', function () {
-//     const itemId = prompt('Enter the ID of the item to delete:');
-//     fetch('/delete-item', {
-//         method: 'DELETE',
+// async function del(params) {
+//    await fetch('/', {
+//         method: 'POST',
 //         headers: {
 //             'Content-Type': 'application/json'
 //         },
-//         body: JSON.stringify({ id: itemId })
+//         body: JSON.stringify({ id: params })
 //     })
 //         .then(response => response.text())
-// });
+
+// }
+
+
+
+
+
+// const add = document.getElementById('add')
+// const addTask = document.getElementById('addTask')
+
+
+// add.addEventListener('submit', (e) => {
+//     e.preventDefault()
+//     console.log(addTask.value);
+//     if (addTask.value) {
+//         socket.emit('addTask', addTask.value)
+//         addTask.value = ''
+//     }
+// }) 

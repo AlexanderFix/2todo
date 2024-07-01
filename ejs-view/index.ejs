@@ -11,7 +11,7 @@
 
 <body>
     <div class="wrapper">
-        <form action="" method="post">
+        <form id="add" action="" method="post">
 
             <label for="addTask">Добавить задачу:</label>
             <input type="text" name="addTask" id="addTask" placeholder="Задача">
@@ -37,8 +37,9 @@
                         <p>Время <br>
                             <%=element.time%>
                         </p>
-                        <!-- <button id="deleteButton">Delete Item</button> -->
-                        <button onclick="del('<%=element.id%>')">Delete Item</button>
+                        <form action="" method="post" >
+                            <button type="submit" name="del" value='<%=element.id%>'>Delete Item</button>
+                        </form>
                     </div>
 
                     <% })} ;%>
@@ -57,8 +58,9 @@
             </div> -->
         </section>
     </div>
-
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
     <script src="index.js"></script>
+
 </body>
 
 </html>
